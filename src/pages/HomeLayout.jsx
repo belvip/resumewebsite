@@ -5,8 +5,12 @@ const HomeLayout = () => {
         <>
             <nav>
                 <span className='text-4xl text-primary'>Resume website</span>
-                <Outlet />
+                
             </nav>
+
+            <section className='align-element py-20'>
+                <Outlet />
+            </section>
         </>
     );
 }
