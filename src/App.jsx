@@ -9,6 +9,7 @@ import {
   Experiences,
   Educations,
   Portfolios,
+  Skills,
   Error
 } from './pages';
 
@@ -40,6 +41,12 @@ const router = createBrowserRouter([
         path: 'experiences',
         // Experiences component will be rendered when this path is accessed
         element: <Experiences />,
+      },
+      {
+        // Path for the "Skills" page
+        path: 'skills',
+        // Experiences component will be rendered when this path is accessed
+        element: <Skills />,
       },
       {
         // Path for the "Educations" page
