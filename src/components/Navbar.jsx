@@ -3,8 +3,14 @@ import { FaBarsStaggered } from 'react-icons/fa6';
 import { NavLink } from 'react-router-dom';
 import NavLinks from './NavLinks';
 import logo from '../assets/logo.jpg';
+import { useState } from 'react';
 
 const Navbar = () => {
+    const [theme, setTheme] = useState(false)
+
+    const handleTheme = () => {
+        setTheme(!theme)
+    }
 
     return (
         <nav className='bg-base-200 shadow-md'>
@@ -32,13 +38,21 @@ const Navbar = () => {
 
                 <div className="navbar-center hidden lg:flex">
                     <ul className='menu menu-horizontal'>
-                        <NavLinks activeClass='bg-red-500' />
+                        <NavLinks />
                     </ul>
                 </div>
 
                 <div className="navbar-end">
                     
                     {/* SET UP THEME */}
+                    <label className='swap swap-rotate'>
+                        <input type="checkbox" onChange={handleTheme} />
+
+                        {/* SUN ICON */}
+                        <BsSunFill className='swap-on h-4 w-4' />
+                        {/* MOON ICON */}
+                        <BsMoonFill className='swap-off h-4 w-4' />
+                    </label>
                 </div>
                 
             </div>
