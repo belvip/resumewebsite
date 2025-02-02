@@ -1,89 +1,113 @@
-import { BsMoonFill, BsSunFill } from 'react-icons/bs';  // Importing icons for sun and moon from react-icons
-import { FaBarsStaggered } from 'react-icons/fa6';  // Importing the hamburger menu icon from react-icons
-import { NavLink } from 'react-router-dom';  // Importing NavLink to handle navigation between pages
-import NavLinks from './NavLinks';  // Importing the NavLinks component which contains the navigation links
-import logo from '../assets/logo.jpg';  // Importing logo image from assets
-import { useEffect, useState } from 'react';  // Importing React hooks for state and side effects
+import { BsMoonFill, BsSunFill } from 'react-icons/bs';  // Importation des icônes pour le soleil et la lune
+import { FaBarsStaggered } from 'react-icons/fa6';  // Icône du menu hamburger
+import { NavLink } from 'react-router-dom';  // Importation de NavLink pour la navigation entre les pages
+import NavLinks from './NavLinks';  // Importation du composant contenant les liens de navigation
+import logo from '../assets/logo.jpg';  // Importation du logo
+import { useEffect, useState } from 'react';  // Importation des hooks React
+import { useTranslation } from 'react-i18next';
 
-// Define an object to store available theme names
+// Définir les thèmes disponibles
 const themes = {
-    winter: 'winter',  // Represents winter theme
-    forest: 'forest',  // Represents forest theme
-}
+  winter: 'winter',
+  forest: 'forest',
+};
 
-// Function to get the saved theme from localStorage, or return the default theme if not found
+// Fonction pour récupérer le thème enregistré dans localStorage, ou retourner le thème par défaut
 const getThemeFromLocalStorage = () => {
-    // Fetch the 'theme' value from localStorage, or return 'winter' if no theme is found
-    return localStorage.getItem('theme') || themes.winter;
-}
+  return localStorage.getItem('theme') || themes.winter;
+};
 
-// Navbar component which contains the logic for the navigation bar and theme toggle
+// Fonction pour récupérer la langue dans localStorage, ou retourner 'fr' si aucune langue n'est définie
+const getLanguageFromLocalStorage = () => {
+  return localStorage.getItem('language') || 'fr';  // Langue par défaut : français
+};
+
+// Composant Navbar
 const Navbar = () => {
-    // Initialize the theme state with the value from localStorage or default to 'winter'
-    const [theme, setTheme] = useState(getThemeFromLocalStorage())
+  const [theme, setTheme] = useState(getThemeFromLocalStorage());
+  const [language, setLanguage] = useState(getLanguageFromLocalStorage());
 
-    // Function to toggle between the themes (winter and forest)
-    const handleTheme = () => {
-        const { winter, forest } = themes;  // Destructuring the themes object
-        const newTheme = theme === winter ? forest : winter;  // Toggle the theme based on the current one
-    
-        setTheme(newTheme);  // Set the new theme state
-    }
+  const { i18n } = useTranslation();
 
-    // useEffect hook to update the document's theme and save it to localStorage whenever the theme changes
-    useEffect(() => {
-        document.documentElement.setAttribute('data-theme', theme);  // Apply the theme as a data attribute on the document element
-        localStorage.setItem('theme', theme);  // Save the selected theme to localStorage so it persists across page refreshes
-    }, [theme]);  // The effect runs whenever the theme state changes
+  // Fonction pour changer de thème
+  const handleTheme = () => {
+    const { winter, forest } = themes;
+    const newTheme = theme === winter ? forest : winter;
+    setTheme(newTheme);
+  };
 
-    return (
-        <nav className='bg-base-200 shadow-md'>  {/* Navbar container with background and shadow */}
-            <div className='navbar align-element'>  {/* Wrapper div for the navbar */}
-                <div className="navbar-start">  {/* Left section of the navbar */}
-                    {/* LOGO */}
-                    <NavLink to='/' className="lg-flex items-center">  {/* Link to the homepage */}
-                        <img 
-                            src={logo}  // Display the logo image
-                            alt='logo'  // Alt text for the logo
-                            className='h-12 w-auto rounded-full object-contain'  // Apply styles to the logo image
-                        />
-                    </NavLink>
+  // Fonction pour changer de langue
+  const handleLanguageChange = (newLanguage) => {
+    setLanguage(newLanguage);
+    i18n.changeLanguage(newLanguage); 
+    localStorage.setItem('language', newLanguage);  // Enregistrer la langue sélectionnée
+  };
 
-                    {/* DROPDOWN MENU (for smaller screen sizes) */}
-                    <div className='dropdown'> 
-                        <label tabIndex={0} className='btn btn-ghost lg:hidden'>  {/* Dropdown menu toggle button (only visible on small screens) */}
-                            <FaBarsStaggered className='h-6 w-6' />  {/* Hamburger menu icon */}
-                        </label>
-                        <ul tabIndex={0} className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-52 border border-gray-300'>
-                            {/* Render navigation links inside the dropdown menu */}
-                            <NavLinks />
-                        </ul>
-                    </div>
-                </div>
+  // Mettre à jour le thème dans le document et le sauvegarder dans localStorage
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
-                <div className="navbar-center hidden lg:flex">  {/* Center section (visible on larger screens) */}
-                    <ul className='menu menu-horizontal'>  {/* Horizontal menu layout */}
-                        {/* Render navigation links in the center section */}
-                        <NavLinks />
-                    </ul>
-                </div>
+  // Mettre à jour la langue dans le document (si nécessaire, tu peux intégrer une bibliothèque comme react-i18next ici)
+  useEffect(() => {
+    // Si tu utilises react-i18next, tu peux appeler i18n.changeLanguage(language)
+    localStorage.setItem('language', language);
+  }, [language]);
 
-                <div className="navbar-end">  {/* Right section of the navbar */}
-                    
-                    {/* THEME TOGGLE */}
-                    <label className='swap swap-rotate'>  {/* Swap label for theme toggle */}
-                        <input type="checkbox" onChange={handleTheme} />  {/* Checkbox to toggle the theme */}
-                        
-                        {/* SUN ICON (visible when the theme is 'winter') */}
-                        <BsSunFill className='swap-on h-4 w-4' />
-                        {/* MOON ICON (visible when the theme is 'forest') */}
-                        <BsMoonFill className='swap-off h-4 w-4' />
-                    </label>
-                </div>
-                
-            </div>
-        </nav>
-    );
-}
+  return (
+    <nav className='bg-base-200 shadow-md'>
+      <div className='navbar align-element'>
+        <div className="navbar-start">
+          <NavLink to='/' className="lg-flex items-center">
+            <img src={logo} alt='logo' className='h-12 w-auto rounded-full object-contain' />
+          </NavLink>
+
+          <div className='dropdown'>
+            <label tabIndex={0} className='btn btn-ghost lg:hidden'>
+              <FaBarsStaggered className='h-6 w-6' />
+            </label>
+            <ul tabIndex={0} className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-52 border border-gray-300'>
+              <NavLinks />
+            </ul>
+          </div>
+        </div>
+
+        <div className="navbar-center hidden lg:flex">
+          <ul className='menu menu-horizontal'>
+            <NavLinks />
+          </ul>
+        </div>
+
+        <div className="navbar-end">
+          {/* Changement de langue */}
+          <div className="dropdown dropdown-end">
+            <label tabIndex={0} className="btn btn-ghost">
+              {language === 'fr' ? 'FR' : 'EN'}
+            </label>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-200 rounded-box w-32"
+            >
+              <li>
+                <button onClick={() => handleLanguageChange('fr')} className="btn btn-ghost">FR</button>
+              </li>
+              <li>
+                <button onClick={() => handleLanguageChange('en')} className="btn btn-ghost">EN</button>
+              </li>
+            </ul>
+          </div>
+
+          {/* BOUTON DE TOGGLE DU THEME */}
+          <label className='swap swap-rotate'>
+            <input type="checkbox" onChange={handleTheme} />
+            <BsSunFill className='swap-on h-4 w-4' />
+            <BsMoonFill className='swap-off h-4 w-4' />
+          </label>
+        </div>
+      </div>
+    </nav>
+  );
+};
 
 export default Navbar;
