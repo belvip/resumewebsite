@@ -11,6 +11,10 @@
     }
 }
 
+img.h-6 {
+    height: 1.5rem;
+}
+
 /* 
     .align-element {
     margin-left: auto;

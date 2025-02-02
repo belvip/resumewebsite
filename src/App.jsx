@@ -1,6 +1,7 @@
 import React from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import './i18n'; // Importez ici votre fichier i18n.js pour initialiser i18next
+import './i18n'; 
+//import './css'
 
 // Import des composants de la page
 import {
