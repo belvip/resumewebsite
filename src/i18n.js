@@ -1,11 +1,11 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
-import Backend from "i18next-http-backend"; // Si vous chargez les traductions depuis des fichiers externes
+import Backend from "i18next-http-backend"; 
 
 i18n
 
-    .use(Backend) // Si vous chargez les traductions depuis un fichier
+    .use(Backend) 
     .use(LanguageDetector) // Détecteur de langue
     .use(initReactI18next)
     .init({
