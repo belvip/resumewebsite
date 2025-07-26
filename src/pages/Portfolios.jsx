@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaFolderOpen, FaExternalLinkAlt, FaCode, FaLaptopCode } from 'react-icons/fa';
+import { portfolioTechnologies } from '../data/technologies';
 
 const Portfolios = () => {
     const { t } = useTranslation();
@@ -52,7 +53,7 @@ const Portfolios = () => {
                     <div className="mt-8 text-center">
                         <h3 className="text-xl font-semibold mb-4 text-base-content">{t('technologiesUsed')}</h3>
                         <div className="flex flex-wrap justify-center gap-3">
-                            {['React', 'JavaScript', 'HTML/CSS', 'WordPress', 'Python', 'SQL', 'DBT', 'Airflow'].map((tech) => (
+                            {portfolioTechnologies.map((tech) => (
                                 <span 
                                     key={tech} 
                                     className="bg-base-300 text-base-content px-4 py-2 rounded-full text-sm font-medium border border-base-content/20"

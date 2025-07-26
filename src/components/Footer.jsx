@@ -31,7 +31,7 @@ const Footer = () => {
                         <div className="space-y-3">
                             <div className="flex justify-center md:justify-start items-center gap-2">
                                 <FaPhone className="text-base-content/60" size={14} />
-                                <a href="+237659394552" className="text-base-content/70 hover:text-primary text-sm transition-colors">
+                                <a href="tel:+237659394552" className="text-base-content/70 hover:text-base-content text-sm transition-colors">
                                     +237 6 59 39 45 52
                                 </a>
                             </div>
@@ -74,10 +74,10 @@ const Footer = () => {
                         <h3 className="font-semibold text-base-content mb-3">{t('navigation')}</h3>
                         <nav className="flex flex-col space-y-2">
                             <Link to="/" className="text-base-content/70 hover:text-base-content hover:translate-x-1 text-sm transition-all duration-200">{t('home')}</Link>
-                            <Link to="/about" className="text-base-content/70 hover:text-base-content text-sm">{t('about')}</Link>
-                            <Link to="/skills" className="text-base-content/70 hover:text-base-content text-sm">{t('skills')}</Link>
-                            <Link to="/experiences" className="text-base-content/70 hover:text-base-content text-sm">{t('experiences')}</Link>
-                            <Link to="/portfolios" className="text-base-content/70 hover:text-base-content text-sm">{t('portfolios')}</Link>
+                            <Link to="/about" className="text-base-content/70 hover:text-base-content hover:translate-x-1 text-sm transition-all duration-200">{t('about')}</Link>
+                            <Link to="/skills" className="text-base-content/70 hover:text-base-content hover:translate-x-1 text-sm transition-all duration-200">{t('skills')}</Link>
+                            <Link to="/experiences" className="text-base-content/70 hover:text-base-content hover:translate-x-1 text-sm transition-all duration-200">{t('experiences')}</Link>
+                            <Link to="/portfolios" className="text-base-content/70 hover:text-base-content hover:translate-x-1 text-sm transition-all duration-200">{t('portfolios')}</Link>
                         </nav>
                     </div>
                 </div>
