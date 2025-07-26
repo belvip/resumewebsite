@@ -34,9 +34,9 @@ const Skills = () => {
     return (
         <div className="max-w-6xl mx-auto px-4">
             <div className="bg-base-100 shadow-xl rounded-lg overflow-hidden">
-                <div className="bg-base-300 text-base-content p-6">
-                    <h1 className="text-3xl font-bold text-center">{t('skills')}</h1>
-                    <p className="text-center mt-2 opacity-90">{t('skillsSubtitle')}</p>
+                <div className="bg-base-300 text-base-content p-8 text-center">
+                    <h1 className="text-4xl font-bold mb-2">{t('skills')}</h1>
+                    <p className="text-lg opacity-80">{t('skillsSubtitle')}</p>
                 </div>
                 
                 <div className="overflow-x-auto">
