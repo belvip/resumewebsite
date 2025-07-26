@@ -42,7 +42,8 @@ const Navbar = () => {
     const handleLanguageChange = (newLanguage) => {
         setLanguage(newLanguage);
         i18n.changeLanguage(newLanguage); 
-        localStorage.setItem('language', newLanguage);  // Enregistrer la langue sélectionnée
+        localStorage.setItem('language', newLanguage);  
+        document.activeElement.blur(); // Fermer le dropdown
     };
 
     // Mettre à jour le thème dans le document et le sauvegarder dans localStorage

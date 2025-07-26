@@ -6,10 +6,10 @@ import Backend from "i18next-http-backend";
 i18n
 
     .use(Backend) 
-    .use(LanguageDetector) // Détecteur de langue
+    .use(LanguageDetector) 
     .use(initReactI18next)
     .init({
-    fallbackLng: 'en', // Langue par défaut
+    fallbackLng: 'en', 
     resources: {
     en: {
         translation: {
@@ -19,6 +19,11 @@ i18n
             educations: 'Educations',
             experiences: 'Experiences',
             portfolios: 'Portfolios',
+            profileDescription: 'Fullstack Developer & Data Engineer. I design high-performance web applications and production-ready data solutions.',
+            learnMore: 'learn more',
+            jobTitle: 'Software Engineer',
+            jobSubtitle: 'Certified Full Stack & Data Engineer',
+            followMe: 'Follow Me',
         },
     },
     fr: {
@@ -29,11 +34,16 @@ i18n
             educations: 'Formations',
             experiences: 'Expériences',
             portfolios: 'Portfolios',
+            profileDescription: 'Développeur Fullstack & Ingénieur Data. Je conçois des applications web performantes et des solutions data prêtes pour la production.',
+            learnMore: 'en savoir plus',
+            jobTitle: 'Ingénieur Logiciel',
+            jobSubtitle: 'Développeur Full Stack & Ingénieur Data Certifié',
+            followMe: 'Suivez-moi',
         },
     },
     },
     interpolation: {
-      escapeValue: false, // React fait déjà l'échappement
+      escapeValue: false, 
     },
 });
 
