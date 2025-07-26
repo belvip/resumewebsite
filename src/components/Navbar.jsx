@@ -10,13 +10,13 @@ import enFlag from '../assets/en-flag.jpg';
 
 // Définir les thèmes disponibles
 const themes = {
-    winter: 'winter',
-    forest: 'forest',
+    corporate: 'corporate',
+    night: 'night',
 };
 
 // Fonction pour récupérer le thème enregistré dans localStorage, ou retourner le thème par défaut
 const getThemeFromLocalStorage = () => {
-    return localStorage.getItem('theme') || themes.winter;
+    return localStorage.getItem('theme') || themes.corporate;
 };
 
 // Fonction pour récupérer la langue dans localStorage, ou retourner 'fr' si aucune langue n'est définie
@@ -39,8 +39,8 @@ const Navbar = () => {
 
     // Fonction pour changer de thème
     const handleTheme = () => {
-        const { winter, forest } = themes;
-        const newTheme = theme === winter ? forest : winter;
+        const { corporate, night } = themes;
+        const newTheme = theme === corporate ? night : corporate;
         setTheme(newTheme);
     };
 
@@ -135,7 +135,7 @@ const Navbar = () => {
 
                 {/* BOUTON DE TOGGLE DU THEME */}
                 <label className='swap swap-rotate'>
-                    <input type="checkbox" onChange={handleTheme} />
+                    <input type="checkbox" onChange={handleTheme} checked={theme === 'night'} />
                     <BsSunFill className='swap-on h-4 w-4' />
                     <BsMoonFill className='swap-off h-4 w-4' />
                 </label>
