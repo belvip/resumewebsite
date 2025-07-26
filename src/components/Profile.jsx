@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaFacebookF, FaTwitter, FaGooglePlusG, FaInstagram, FaPinterest, FaEllipsisV, FaTimes } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaGooglePlusG, FaInstagram, FaPinterest, FaEllipsisV, FaTimes, FaLinkedinIn, FaTiktok } from "react-icons/fa";
 import ImgProfile from "./images/logoJava.png";
 import ImgFigurine from "../assets/figurineImage.png";
 import { useTranslation } from 'react-i18next';
@@ -52,12 +52,28 @@ const Profile = () => {
                             </button>
 
                             {/* Social Icons */}
-                            <div className="flex space-x-4 mt-4 text-gray-800">
-                                <FaFacebookF size={24} className="hover:text-blue-500 cursor-pointer" />
-                                <FaTwitter size={24} className="hover:text-blue-400 cursor-pointer" />
-                                <FaGooglePlusG size={24} className="hover:text-red-500 cursor-pointer" />
-                                <FaInstagram size={24} className="hover:text-pink-500 cursor-pointer" />
-                                <FaPinterest size={24} className="hover:text-red-600 cursor-pointer" />
+                            <div className="flex justify-center md:justify-start space-x-3">
+                                <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                                    <FaFacebookF className="text-base-content/60 hover:text-blue-500 cursor-pointer transition-colors" size={18} />
+                                </a>
+                                <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                                    <FaTwitter className="text-base-content/60 hover:text-blue-400 cursor-pointer transition-colors" size={18} />
+                                </a>
+                                <a href="https://plus.google.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                                    <FaGooglePlusG className="text-base-content/60 hover:text-red-500 cursor-pointer transition-colors" size={18} />
+                                </a>
+                                <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                                    <FaInstagram className="text-base-content/60 hover:text-pink-500 cursor-pointer transition-colors" size={18} />
+                                </a>
+                                <a href="https://pinterest.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                                    <FaPinterest className="text-base-content/60 hover:text-red-600 cursor-pointer transition-colors" size={18} />
+                                </a>
+                                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+                                    <FaLinkedinIn className="text-base-content/60 hover:text-blue-700 cursor-pointer transition-colors" size={18} />
+                                                        </a>
+                                <a href="https://tiktok.com/@yourprofile" target="_blank" rel="noopener noreferrer">
+                                    <FaTiktok className="text-base-content/60 hover:text-black cursor-pointer transition-colors" size={18} />
+                                </a>
                             </div>
                         </div>
                     )}

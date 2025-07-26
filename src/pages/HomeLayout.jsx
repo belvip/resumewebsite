@@ -1,16 +1,19 @@
 import { Outlet } from 'react-router-dom';
 import { Navbar } from '../components'
+import Footer from '../components/Footer';
 
 const HomeLayout = () => {
     return (
-        <>
+        <div className="min-h-screen flex flex-col">
             <Navbar />
 
-            <section className='align-element py-20'>
+            <main className='align-element py-20 flex-grow'>
                 {/* Outlet for rendering child components */}
                 <Outlet />
-            </section>
-        </>
+            </main>
+
+            <Footer />
+        </div>
     );
 }
 
