@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaGooglePlusG, FaInstagram, FaPinterest, FaEllipsisV, FaTimes } from "react-icons/fa";
 import ImgProfile from "./images/logoJava.png";
+import ImgFigurine from "../assets/figurineImage.png"
 
 const Profile = () => {
     const [isRevealed, setIsRevealed] = useState(false);
 
     return (
-        <div className="flex justify-center items-center">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-8">
             <div className="relative bg-white shadow-lg rounded-lg overflow-hidden w-80">
                 {/* Profile Image */}
                 <div className="relative">
@@ -57,6 +58,10 @@ const Profile = () => {
                         </div>
                     </div>
                 )}
+            </div>
+
+            <div>
+                <img src={ImgFigurine} alt="Figurine" />
             </div>
         </div>
     );
