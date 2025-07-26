@@ -37,6 +37,8 @@ i18n
             dataEngineering: 'Data Engineering',
             cloudDevops: 'Cloud & DevOps',
             biVisualization: 'BI / Visualization',
+            contact: 'Contact',
+            inspiration: 'Inspiration',
         },
     },
     fr: {
@@ -65,6 +67,8 @@ i18n
             dataEngineering: 'Data Engineering',
             cloudDevops: 'Cloud & DevOps',
             biVisualization: 'BI / Visualisation',
+            contact: 'Contact',
+            inspiration: 'Inspiration',
         },
     },
     },
