@@ -56,7 +56,7 @@ const Footer = () => {
                             {t('footerSubMessage')}
                         </p>
                         <p className="text-base-content/60 text-xs mt-2">
-                            Belvinard © {currentYear}
+                            Belvinard © {currentYear} - {t('allRightsReserved')}
                         </p>
                     </div>
 
