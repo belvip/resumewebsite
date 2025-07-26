@@ -65,7 +65,7 @@ const Navbar = () => {
     }, [language, i18n]);
 
     return (
-        <nav className='bg-base-200 shadow-md'>
+        <nav className='bg-base-200 shadow-md sticky top-0 z-50'>
         <div className='navbar align-element'>
             <div className="navbar-start">
                 <NavLink to='/' className="lg-flex items-center">
