@@ -37,19 +37,19 @@ const Footer = () => {
                             </div>
                             <div className="flex justify-center md:justify-start space-x-3 flex-wrap gap-y-2">
                                 <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                                    <FaFacebookF className="text-base-content/60 hover:text-blue-500 hover:scale-110 cursor-pointer transition-all duration-200" size={18} />
+                                    <FaFacebookF className="text-base-content/60 hover:text-base-content hover:scale-110 cursor-pointer transition-all duration-200" size={18} />
                                 </a>
                                 <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
-                                    <FaTwitter className="text-base-content/60 hover:text-blue-400 cursor-pointer transition-colors" size={18} />
+                                    <FaTwitter className="text-base-content/60 hover:text-base-content cursor-pointer transition-colors" size={18} />
                                 </a>
                                 <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
-                                    <FaLinkedinIn className="text-base-content/60 hover:text-blue-700 cursor-pointer transition-colors" size={18} />
+                                    <FaLinkedinIn className="text-base-content/60 hover:text-base-content cursor-pointer transition-colors" size={18} />
                                 </a>
                                 <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
-                                    <FaInstagram className="text-base-content/60 hover:text-pink-500 cursor-pointer transition-colors" size={18} />
+                                    <FaInstagram className="text-base-content/60 hover:text-base-content cursor-pointer transition-colors" size={18} />
                                 </a>
                                  <a href="https://tiktok.com/@yourprofile" target="_blank" rel="noopener noreferrer">
-                                    <FaTiktok className="text-base-content/60 hover:text-black cursor-pointer transition-colors" size={18} />
+                                    <FaTiktok className="text-base-content/60 hover:text-base-content cursor-pointer transition-colors" size={18} />
                                 </a>
                             </div>
                         </div>
@@ -73,11 +73,11 @@ const Footer = () => {
                     <div className="text-center md:text-right">
                         <h3 className="font-semibold text-base-content mb-3">{t('navigation')}</h3>
                         <nav className="flex flex-col space-y-2">
-                            <Link to="/" className="text-base-content/70 hover:text-primary hover:translate-x-1 text-sm transition-all duration-200">{t('home')}</Link>
-                            <Link to="/about" className="text-base-content/70 hover:text-primary text-sm">{t('about')}</Link>
-                            <Link to="/skills" className="text-base-content/70 hover:text-primary text-sm">{t('skills')}</Link>
-                            <Link to="/experiences" className="text-base-content/70 hover:text-primary text-sm">{t('experiences')}</Link>
-                            <Link to="/portfolios" className="text-base-content/70 hover:text-primary text-sm">{t('portfolios')}</Link>
+                            <Link to="/" className="text-base-content/70 hover:text-base-content hover:translate-x-1 text-sm transition-all duration-200">{t('home')}</Link>
+                            <Link to="/about" className="text-base-content/70 hover:text-base-content text-sm">{t('about')}</Link>
+                            <Link to="/skills" className="text-base-content/70 hover:text-base-content text-sm">{t('skills')}</Link>
+                            <Link to="/experiences" className="text-base-content/70 hover:text-base-content text-sm">{t('experiences')}</Link>
+                            <Link to="/portfolios" className="text-base-content/70 hover:text-base-content text-sm">{t('portfolios')}</Link>
                         </nav>
                     </div>
                 </div>
