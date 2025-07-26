@@ -7,7 +7,7 @@ const Skills = () => {
     const skillsData = [
         {
             domain: t('frontend'),
-            technologies: "HTML, CSS, JavaScript, React, Tailwind"
+            technologies: "HTML, CSS, JavaScript, React, Tailwind, WordPress"
         },
         {
             domain: t('backend'),
