@@ -11,7 +11,7 @@ const About = () => {
                 {/* Header */}
                 <div className="bg-base-300 text-base-content p-8 text-center">
                     <h1 className="text-4xl font-bold mb-2">{t('about')}</h1>
-                    <p className="text-lg opacity-80">Software Engineer & Data Specialist</p>
+                    <p className="text-lg opacity-80">{t('aboutSubtitle')}</p>
                 </div>
 
                 <div className="p-8">
@@ -19,8 +19,7 @@ const About = () => {
                     <div className="mb-8 text-center">
                         <FaCode className="mx-auto text-base-content text-4xl mb-4" />
                         <p className="text-lg text-base-content/90 leading-relaxed max-w-4xl mx-auto">
-                            <span className="font-semibold text-base-content">Passionné par les technologies web et la donnée</span>, je suis développeur fullstack spécialisé en 
-                            <span className="font-medium"> Java (Spring Boot), JavaScript (React, Node.js) et Python (FastAPI)</span>.
+                            {t('aboutIntro')}
                         </p>
                     </div>
 
@@ -30,12 +29,10 @@ const About = () => {
                         <div className="bg-base-200 p-6 rounded-lg">
                             <div className="flex items-center mb-4">
                                 <FaDatabase className="text-base-content text-2xl mr-3" />
-                                <h3 className="text-xl font-semibold">Data Engineering</h3>
+                                <h3 className="text-xl font-semibold">{t('dataEngineeringTitle')}</h3>
                             </div>
                             <p className="text-base-content/80">
-                                Grâce à mes compétences en <span className="font-medium">ingénierie d'entrepôt de données</span>, 
-                                je sais construire des architectures data modernes avec 
-                                <span className="font-medium"> SQL, ETL, DBT, Airflow et BigQuery</span>.
+                                {t('dataEngineeringDesc')}
                             </p>
                         </div>
 
@@ -43,11 +40,10 @@ const About = () => {
                         <div className="bg-base-200 p-6 rounded-lg">
                             <div className="flex items-center mb-4">
                                 <FaRocket className="text-base-content text-2xl mr-3" />
-                                <h3 className="text-xl font-semibold">Développement Full Stack</h3>
+                                <h3 className="text-xl font-semibold">{t('fullStackDev')}</h3>
                             </div>
                             <p className="text-base-content/80">
-                                Je crée des <span className="font-medium">applications web de bout en bout</span>, 
-                                tout en assurant l'intégration, la transformation et l'analyse des données à grande échelle.
+                                {t('fullStackDevDesc')}
                             </p>
                         </div>
                     </div>
@@ -55,22 +51,49 @@ const About = () => {
                     {/* Objectif */}
                     <div className="bg-base-200 p-6 rounded-lg text-center border-l-4 border-base-content/20">
                         <FaBullseye className="mx-auto text-base-content text-3xl mb-4" />
-                        <h3 className="text-xl font-semibold mb-3 text-base-content">Mon Objectif</h3>
+                        <h3 className="text-xl font-semibold mb-3 text-base-content">{t('myObjective')}</h3>
                         <p className="text-lg text-base-content/90 max-w-3xl mx-auto">
-                            Accompagner les entreprises dans la création d'<span className="font-semibold">applications intelligentes, 
-                            connectées à leurs données</span>.
+                            {t('objectiveDesc')}
                         </p>
                     </div>
 
                     {/* Technologies */}
                     <div className="mt-8 text-center">
-                        <h3 className="text-xl font-semibold mb-4">Technologies Maîtrisées</h3>
+                        <h3 className="text-xl font-semibold mb-4">{t('technologiesMastered')}</h3>
                         <div className="flex flex-wrap justify-center gap-3">
                             {['Java', 'Spring Boot', 'React', 'Node.js', 'Python', 'FastAPI', 'SQL', 'DBT', 'Airflow', 'BigQuery'].map((tech) => (
                                 <span key={tech} className="bg-base-200 text-base-content px-3 py-1 rounded-full text-sm font-medium border border-base-300">
                                     {tech}
                                 </span>
                             ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Personal Info Section */}
+            <div className="bg-base-100 shadow-xl rounded-lg overflow-hidden mt-8">
+                <div className="bg-base-300 text-base-content p-6 text-center">
+                    <h2 className="text-2xl font-bold">{t('personalInfo')}</h2>
+                </div>
+                <div className="p-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {/* Left Column */}
+                        <div className="bg-base-200 p-6 rounded-lg">
+                            <h3 className="text-lg font-semibold mb-4 text-base-content">{t('contactInfo')}</h3>
+                            <div className="space-y-3">
+                                <p className="text-base-content/80"><span className="font-medium">{t('address')}:</span> Yaoundé, Cameroun</p>
+                                <p className="text-base-content/80"><span className="font-medium">{t('email')}:</span> belvinard97@mail.com</p>
+                                <p className="text-base-content/80"><span className="font-medium">{t('phone')}:</span> +237 6 59 39 45 52</p>
+                            </div>
+                        </div>
+                        {/* Right Column */}
+                        <div className="bg-base-200 p-6 rounded-lg">
+                            <h3 className="text-lg font-semibold mb-4 text-base-content">{t('languages')}</h3>
+                            <div className="space-y-3">
+                                <p className="text-base-content/80"><span className="font-medium">{t('mainLanguage')}:</span> Français</p>
+                                <p className="text-base-content/80"><span className="font-medium">{t('secondLanguage')}:</span> Anglais</p>
+                            </div>
                         </div>
                     </div>
                 </div>

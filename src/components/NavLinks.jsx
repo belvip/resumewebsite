@@ -19,8 +19,12 @@ const NavLinks = () => {
                 const { id, url, text } = link;
                 return (
                 <li key={id}>
-                    <NavLink className='capitalize' to={url}>
-                    {t(text)} {/* Utilisez 't' pour obtenir la traduction */}
+                    <NavLink 
+                        className='capitalize' 
+                        to={url}
+                        onClick={() => document.activeElement.blur()}
+                    >
+                        {t(text)} {/* Utilisez 't' pour obtenir la traduction */}
                     </NavLink>
                 </li>
                 );
