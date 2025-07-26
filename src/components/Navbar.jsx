@@ -31,6 +31,12 @@ const Navbar = () => {
 
     const { i18n } = useTranslation();
 
+    // Initialiser i18n avec la langue du localStorage
+    useEffect(() => {
+        const savedLanguage = getLanguageFromLocalStorage();
+        i18n.changeLanguage(savedLanguage);
+    }, [i18n]);
+
     // Fonction pour changer de thème
     const handleTheme = () => {
         const { winter, forest } = themes;
@@ -54,9 +60,9 @@ const Navbar = () => {
 
     // Mettre à jour la langue dans le document 
     useEffect(() => {
-        // Appeler i18n.changeLanguage(language)
+        i18n.changeLanguage(language);
         localStorage.setItem('language', language);
-    }, [language]);
+    }, [language, i18n]);
 
     return (
         <nav className='bg-base-200 shadow-md'>
