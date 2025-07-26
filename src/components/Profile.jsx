@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaFacebookF, FaTwitter, FaGooglePlusG, FaInstagram, FaPinterest, FaEllipsisV, FaTimes, FaLinkedinIn, FaTiktok } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaInstagram,FaEllipsisV, FaTimes, FaLinkedinIn, FaTiktok } from "react-icons/fa";
 import ImgProfile from "./images/logoJava.png";
 import ImgFigurine from "../assets/figurineImage.png";
 import { useTranslation } from 'react-i18next';
@@ -59,14 +59,8 @@ const Profile = () => {
                                 <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
                                     <FaTwitter className="text-base-content/60 hover:text-blue-400 cursor-pointer transition-colors" size={18} />
                                 </a>
-                                <a href="https://plus.google.com/yourprofile" target="_blank" rel="noopener noreferrer">
-                                    <FaGooglePlusG className="text-base-content/60 hover:text-red-500 cursor-pointer transition-colors" size={18} />
-                                </a>
                                 <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
                                     <FaInstagram className="text-base-content/60 hover:text-pink-500 cursor-pointer transition-colors" size={18} />
-                                </a>
-                                <a href="https://pinterest.com/yourprofile" target="_blank" rel="noopener noreferrer">
-                                    <FaPinterest className="text-base-content/60 hover:text-red-600 cursor-pointer transition-colors" size={18} />
                                 </a>
                                 <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
                                     <FaLinkedinIn className="text-base-content/60 hover:text-blue-700 cursor-pointer transition-colors" size={18} />
