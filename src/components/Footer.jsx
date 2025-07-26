@@ -22,9 +22,9 @@ const Footer = () => {
                                 />
                             </Link>
                         </div>
-                        <div className="flex justify-center md:justify-start space-x-3">
-                            <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer">
-                                <FaFacebookF className="text-base-content/60 hover:text-blue-500 cursor-pointer transition-colors" size={18} />
+                        <div className="flex justify-center md:justify-start space-x-3 flex-wrap gap-y-2">
+                            <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                <FaFacebookF className="text-base-content/60 hover:text-blue-500 hover:scale-110 cursor-pointer transition-all duration-200" size={18} />
                             </a>
                             <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
                                 <FaTwitter className="text-base-content/60 hover:text-blue-400 cursor-pointer transition-colors" size={18} />
@@ -64,7 +64,7 @@ const Footer = () => {
                     <div className="text-center md:text-right">
                         <h3 className="font-semibold text-base-content mb-3">{t('navigation')}</h3>
                         <nav className="flex flex-col space-y-2">
-                            <Link to="/" className="text-base-content/70 hover:text-primary text-sm">{t('home')}</Link>
+                            <Link to="/" className="text-base-content/70 hover:text-primary hover:translate-x-1 text-sm transition-all duration-200">{t('home')}</Link>
                             <Link to="/about" className="text-base-content/70 hover:text-primary text-sm">{t('about')}</Link>
                             <Link to="/skills" className="text-base-content/70 hover:text-primary text-sm">{t('skills')}</Link>
                             <Link to="/experiences" className="text-base-content/70 hover:text-primary text-sm">{t('experiences')}</Link>
