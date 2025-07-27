@@ -10,7 +10,11 @@ const Footer = () => {
     return (
         <footer className="bg-base-200 border-t border-base-300 mt-auto py-8">
             <div className="align-element">
+<<<<<<< HEAD
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
+=======
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
+>>>>>>> 9ff532c (feat: Enhance footer with contact info, social links, and privacy policy)
                     {/* Left - Logo */}
                     <div className="text-center md:text-left">
                         <div className="flex justify-center md:justify-start items-center gap-4 mb-3">
@@ -35,21 +39,31 @@ const Footer = () => {
                                     +237 6 59 39 45 52
                                 </a>
                             </div>
-                            <div className="flex justify-center md:justify-start space-x-3 flex-wrap gap-y-2">
+                            <div className="flex justify-center md:justify-start items-center gap-2">
+                                <span className="text-base-content/60 text-sm">📧</span>
+                                <a href="mailto:belvinard97@mail.com" className="text-base-content/70 hover:text-base-content text-sm transition-colors">
+                                    belvinard97@mail.com
+                                </a>
+                            </div>
+                            <div className="flex justify-center md:justify-start items-center gap-2">
+                                <span className="text-base-content/60 text-sm">📍</span>
+                                <span className="text-base-content/70 text-sm">Yaoundé, Cameroun</span>
+                            </div>
+                            <div className="flex justify-center md:justify-start space-x-4 flex-wrap gap-y-2 mt-4">
                                 <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                                    <FaFacebookF className="text-base-content/60 hover:text-base-content hover:scale-110 cursor-pointer transition-all duration-200" size={18} />
+                                    <FaFacebookF className="text-base-content/60 hover:text-blue-600 hover:scale-110 cursor-pointer transition-all duration-200" size={18} />
                                 </a>
-                                <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
-                                    <FaTwitter className="text-base-content/60 hover:text-base-content cursor-pointer transition-colors" size={18} />
+                                <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                                    <FaTwitter className="text-base-content/60 hover:text-blue-400 hover:scale-110 cursor-pointer transition-all duration-200" size={18} />
                                 </a>
-                                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
-                                    <FaLinkedinIn className="text-base-content/60 hover:text-base-content cursor-pointer transition-colors" size={18} />
+                                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                    <FaLinkedinIn className="text-base-content/60 hover:text-blue-700 hover:scale-110 cursor-pointer transition-all duration-200" size={18} />
                                 </a>
-                                <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
-                                    <FaInstagram className="text-base-content/60 hover:text-base-content cursor-pointer transition-colors" size={18} />
+                                <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                    <FaInstagram className="text-base-content/60 hover:text-pink-500 hover:scale-110 cursor-pointer transition-all duration-200" size={18} />
                                 </a>
-                                 <a href="https://tiktok.com/@yourprofile" target="_blank" rel="noopener noreferrer">
-                                    <FaTiktok className="text-base-content/60 hover:text-base-content cursor-pointer transition-colors" size={18} />
+                                 <a href="https://tiktok.com/@yourprofile" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                                    <FaTiktok className="text-base-content/60 hover:text-black hover:scale-110 cursor-pointer transition-all duration-200" size={18} />
                                 </a>
                             </div>
                         </div>
@@ -64,6 +78,12 @@ const Footer = () => {
                             <Link to="/skills" className="text-base-content/70 hover:text-base-content hover:translate-x-1 text-sm transition-all duration-200">{t('skills')}</Link>
                             <Link to="/experiences" className="text-base-content/70 hover:text-base-content hover:translate-x-1 text-sm transition-all duration-200">{t('experiences')}</Link>
                             <Link to="/portfolios" className="text-base-content/70 hover:text-base-content hover:translate-x-1 text-sm transition-all duration-200">{t('portfolios')}</Link>
+<<<<<<< HEAD
+=======
+                            <div className="border-t border-base-300 pt-2 mt-3">
+                                <a href="#" className="text-base-content/60 hover:text-base-content text-xs transition-colors">{t('privacyPolicy')}</a>
+                            </div>
+>>>>>>> 9ff532c (feat: Enhance footer with contact info, social links, and privacy policy)
                         </nav>
                     </div>
 

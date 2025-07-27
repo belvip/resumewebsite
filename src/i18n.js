@@ -74,6 +74,7 @@ i18n
             portfolioTitle: 'Complete Portfolio',
             portfolioDesc: 'Explore my complete collection of web development and data engineering projects including React applications, WordPress sites, full-stack solutions and data pipelines developed with various technologies.',
             technologiesUsed: 'Technologies Used',
+            privacyPolicy: 'Privacy Policy',
         },
     },
     fr: {
@@ -139,6 +140,7 @@ i18n
             portfolioTitle: 'Portfolio Complet',
             portfolioDesc: 'Explorez ma collection complète de projets web et data engineering incluant des applications React, des sites WordPress, des solutions full-stack et des pipelines de données développés avec diverses technologies.',
             technologiesUsed: 'Technologies Utilisées',
+            privacyPolicy: 'Politique de Confidentialité',
         },
     },
     },
