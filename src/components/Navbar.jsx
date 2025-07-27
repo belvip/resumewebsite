@@ -9,43 +9,37 @@ import { useTranslation } from 'react-i18next';
 import frFlag from '../assets/fr-flag.jpg'; 
 import enFlag from '../assets/en-flag.jpg'; 
 
-// Définir les thèmes disponibles
 const themes = {
     corporate: 'corporate',
     night: 'night',
 };
 
-// Fonction pour récupérer le thème enregistré dans localStorage, ou retourner le thème par défaut
 const getThemeFromLocalStorage = () => {
     return localStorage.getItem('theme') || themes.corporate;
 };
 
-// Fonction pour récupérer la langue dans localStorage, ou retourner 'fr' si aucune langue n'est définie
 const getLanguageFromLocalStorage = () => {
   return localStorage.getItem('language') || 'fr';  // Langue par défaut : français
 };
 
-// Composant Navbar
+
 const Navbar = () => {
     const [theme, setTheme] = useState(getThemeFromLocalStorage());
     const [language, setLanguage] = useState(getLanguageFromLocalStorage());
 
     const { i18n } = useTranslation();
 
-    // Initialiser i18n avec la langue du localStorage
     useEffect(() => {
         const savedLanguage = getLanguageFromLocalStorage();
         i18n.changeLanguage(savedLanguage);
     }, [i18n]);
 
-    // Fonction pour changer de thème
     const handleTheme = () => {
         const { corporate, night } = themes;
         const newTheme = theme === corporate ? night : corporate;
         setTheme(newTheme);
     };
 
-    // Fonction pour changer de langue
     const handleLanguageChange = (newLanguage) => {
         setLanguage(newLanguage);
         i18n.changeLanguage(newLanguage); 
@@ -53,20 +47,18 @@ const Navbar = () => {
         document.activeElement.blur(); // Fermer le dropdown
     };
 
-    // Mettre à jour le thème dans le document et le sauvegarder dans localStorage
     useEffect(() => {
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
     }, [theme]);
 
-    // Mettre à jour la langue dans le document 
     useEffect(() => {
         i18n.changeLanguage(language);
         localStorage.setItem('language', language);
     }, [language, i18n]);
 
     return (
-        <nav className='bg-base-200 shadow-md sticky top-0 z-50'>
+        <nav className='bg-base-200 shadow-md fixed top-0 left-0 right-0 z-50'>
         <div className='navbar align-element'>
             <div className="navbar-start">
                 <NavLink to='/' className="lg-flex items-center">
