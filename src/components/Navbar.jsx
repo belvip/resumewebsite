@@ -1,5 +1,6 @@
 import { BsMoonFill, BsSunFill } from 'react-icons/bs'; 
-import { FaBarsStaggered } from 'react-icons/fa6';  
+import { FaBarsStaggered } from 'react-icons/fa6';
+import { FaChevronDown } from 'react-icons/fa';  
 import { NavLink } from 'react-router-dom';  
 import NavLinks from './NavLinks';  
 import logo from '../assets/logo.jpg';  
@@ -91,7 +92,7 @@ const Navbar = () => {
             <div className="navbar-end">
                 {/* Changement de langue */}
                 <div className="dropdown dropdown-end">
-                    <label tabIndex={0} className="btn btn-ghost">
+                    <label tabIndex={0} className="btn btn-ghost flex items-center gap-1">
                         {/* Afficher le drapeau correspondant à la langue actuelle */}
                         {language === 'fr' ? (
                                 <img 
@@ -106,6 +107,7 @@ const Navbar = () => {
                                     className="h-6 w-6 object-contain" 
                                 />
                             )}
+                        <FaChevronDown className="h-3 w-3 text-base-content/60" />
                     </label>
                     
                     <ul
