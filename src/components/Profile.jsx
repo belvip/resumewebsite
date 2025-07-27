@@ -78,7 +78,7 @@ const Profile = () => {
                 </div>
             </div>
 
-            <div className="max-w-6xl">
+            <div className="align-element">
                 <div className="bg-base-100 shadow-xl rounded-lg overflow-hidden">
                     <div className="p-8">
                         <p className="text-lg text-base-content/90 leading-relaxed mb-4 text-justify">{t('profileDescription')}</p>

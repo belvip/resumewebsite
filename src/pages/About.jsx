@@ -6,7 +6,7 @@ const About = () => {
     const { t } = useTranslation();
 
     return (
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="align-element">
             <div className="bg-base-100 shadow-xl rounded-lg overflow-hidden">
                 {/* Header */}
                 <div className="bg-base-300 text-base-content p-8 text-center">

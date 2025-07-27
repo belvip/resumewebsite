@@ -32,7 +32,7 @@ const Skills = () => {
     ];
 
     return (
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="mx-auto max-w-6xl px-8">
             <div className="bg-base-100 shadow-xl rounded-lg overflow-hidden">
                 <div className="bg-base-300 text-base-content p-8 text-center">
                     <h1 className="text-4xl font-bold mb-2">{t('skills')}</h1>
