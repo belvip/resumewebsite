@@ -7,7 +7,7 @@ const Educations = () => {
     const { t } = useTranslation();
 
     return (
-        <div className="mx-auto max-w-6xl px-8">
+        <div className="align-element">
             <div className="bg-base-100 shadow-xl rounded-lg overflow-hidden">
                 {/* Header */}
                 <div className="bg-base-300 text-base-content p-8 text-center">
