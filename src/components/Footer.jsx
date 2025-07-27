@@ -8,8 +8,8 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-base-200 border-t border-base-300 mt-auto">
-            <div className="max-w-7xl mx-auto px-4 py-8">
+        <footer className="bg-base-200 border-t border-base-300 mt-auto py-8">
+            <div className="align-element">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
                     {/* Left - Logo */}
                     <div className="text-center md:text-left">
@@ -55,8 +55,20 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* About Section */}
-                    <div className="text-center">
+                    {/* Navigation Links */}
+                    <div className="text-center md:text-left">
+                        <h3 className="font-semibold text-base-content mb-3">{t('navigation')}</h3>
+                        <nav className="flex flex-col space-y-2">
+                            <Link to="/" className="text-base-content/70 hover:text-base-content hover:translate-x-1 text-sm transition-all duration-200">{t('home')}</Link>
+                            <Link to="/about" className="text-base-content/70 hover:text-base-content hover:translate-x-1 text-sm transition-all duration-200">{t('about')}</Link>
+                            <Link to="/skills" className="text-base-content/70 hover:text-base-content hover:translate-x-1 text-sm transition-all duration-200">{t('skills')}</Link>
+                            <Link to="/experiences" className="text-base-content/70 hover:text-base-content hover:translate-x-1 text-sm transition-all duration-200">{t('experiences')}</Link>
+                            <Link to="/portfolios" className="text-base-content/70 hover:text-base-content hover:translate-x-1 text-sm transition-all duration-200">{t('portfolios')}</Link>
+                        </nav>
+                    </div>
+
+                    {/* Inspiration Section */}
+                    <div className="text-center md:text-right">
                         <h3 className="font-semibold text-base-content mb-3">{t('inspiration')}</h3>
                         <p className="text-base-content/80 text-sm">
                             {t('footerMessage')}
@@ -67,18 +79,6 @@ const Footer = () => {
                         <p className="text-base-content/60 text-xs mt-2">
                             Belvinard © {currentYear} - {t('allRightsReserved')}
                         </p>
-                    </div>
-
-                    {/* Navigation Links */}
-                    <div className="text-center md:text-right">
-                        <h3 className="font-semibold text-base-content mb-3">{t('navigation')}</h3>
-                        <nav className="flex flex-col space-y-2">
-                            <Link to="/" className="text-base-content/70 hover:text-base-content hover:translate-x-1 text-sm transition-all duration-200">{t('home')}</Link>
-                            <Link to="/about" className="text-base-content/70 hover:text-base-content hover:translate-x-1 text-sm transition-all duration-200">{t('about')}</Link>
-                            <Link to="/skills" className="text-base-content/70 hover:text-base-content hover:translate-x-1 text-sm transition-all duration-200">{t('skills')}</Link>
-                            <Link to="/experiences" className="text-base-content/70 hover:text-base-content hover:translate-x-1 text-sm transition-all duration-200">{t('experiences')}</Link>
-                            <Link to="/portfolios" className="text-base-content/70 hover:text-base-content hover:translate-x-1 text-sm transition-all duration-200">{t('portfolios')}</Link>
-                        </nav>
                     </div>
                 </div>
             </div>
