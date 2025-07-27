@@ -40,7 +40,7 @@ const Footer = () => {
                             <div className="flex justify-center md:justify-start items-center gap-2">
                                 <span className="text-base-content/60 text-sm">📧</span>
                                 <a href="mailto:belvinard97@mail.com" className="text-base-content/70 hover:text-base-content text-sm transition-colors">
-                                    belvinard97@mail.com
+                                    belvinard97@gmail.com
                                 </a>
                             </div>
                             <div className="flex justify-center md:justify-start items-center gap-2">
