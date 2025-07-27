@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaTiktok, FaPhone } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaTiktok, FaPhone, FaEnvelope } from 'react-icons/fa';
 import logo from '../assets/logo.jpg';
 import PrivacyModal from './PrivacyModal';
 
@@ -38,7 +38,7 @@ const Footer = () => {
                                 </a>
                             </div>
                             <div className="flex justify-center md:justify-start items-center gap-2">
-                                <span className="text-base-content/60 text-sm">📧</span>
+                                <FaEnvelope className="text-base-content/60" size={14} />
                                 <a href="mailto:belvinard97@mail.com" className="text-base-content/70 hover:text-base-content text-sm transition-colors">
                                     belvinard97@gmail.com
                                 </a>
