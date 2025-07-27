@@ -37,16 +37,18 @@ const Portfolios = () => {
                         </div>
 
                         {/* Portfolio Button */}
-                        <a 
-                            href="https://belvi-projects.netlify.app/" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-3 bg-base-content text-base-100 px-8 py-4 rounded-lg hover:bg-base-content/90 transition-colors text-lg font-medium"
-                        >
-                            <FaCode size={20} />
-                            <span>{t('viewPortfolio')}</span>
-                            <FaExternalLinkAlt size={16} />
-                        </a>
+                        <div className="flex justify-center">
+                            <a 
+                                href="https://belvi-projects.netlify.app/" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-3 bg-base-content text-base-100 px-8 py-4 rounded-lg hover:bg-base-content/90 transition-colors text-lg font-medium"
+                            >
+                                <FaCode size={20} />
+                                <span>{t('viewPortfolio')}</span>
+                                <FaExternalLinkAlt size={16} />
+                            </a>
+                        </div>
                     </div>
 
                     {/* Technologies Preview */}
