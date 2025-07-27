@@ -10,11 +10,8 @@ const Footer = () => {
     return (
         <footer className="bg-base-200 border-t border-base-300 mt-auto py-8">
             <div className="align-element">
-<<<<<<< HEAD
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
-=======
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
->>>>>>> 9ff532c (feat: Enhance footer with contact info, social links, and privacy policy)
                     {/* Left - Logo */}
                     <div className="text-center md:text-left">
                         <div className="flex justify-center md:justify-start items-center gap-4 mb-3">
@@ -78,12 +75,9 @@ const Footer = () => {
                             <Link to="/skills" className="text-base-content/70 hover:text-base-content hover:translate-x-1 text-sm transition-all duration-200">{t('skills')}</Link>
                             <Link to="/experiences" className="text-base-content/70 hover:text-base-content hover:translate-x-1 text-sm transition-all duration-200">{t('experiences')}</Link>
                             <Link to="/portfolios" className="text-base-content/70 hover:text-base-content hover:translate-x-1 text-sm transition-all duration-200">{t('portfolios')}</Link>
-<<<<<<< HEAD
-=======
                             <div className="border-t border-base-300 pt-2 mt-3">
                                 <a href="#" className="text-base-content/60 hover:text-base-content text-xs transition-colors">{t('privacyPolicy')}</a>
                             </div>
->>>>>>> 9ff532c (feat: Enhance footer with contact info, social links, and privacy policy)
                         </nav>
                     </div>
 
