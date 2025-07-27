@@ -81,7 +81,7 @@ const Profile = () => {
             <div className="align-element">
                 <div className="bg-base-100 shadow-xl rounded-lg overflow-hidden">
                     <div className="p-8">
-                        <p className="text-lg text-base-content/90 leading-relaxed mb-4 text-justify">{t('profileDescription')}</p>
+                        <p className="text-lg text-base-content/90 leading-relaxed mb-4 text-left">{t('profileDescription')}</p>
                         <div className="">
                             <Link to="/about" className="text-base-content underline hover:text-base-content/80 cursor-pointer transition-colors">
                                 {t('learnMore')}
