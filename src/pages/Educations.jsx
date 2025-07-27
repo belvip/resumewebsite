@@ -17,7 +17,7 @@ const Educations = () => {
 
                 <div className="p-8">
                     {/* Introduction */}
-                    <div className="mb-8 text-center">
+                    <div className="mb-8 text-left">
                         <FaCertificate className="mx-auto text-base-content text-4xl mb-4" />
                         <p className="text-lg text-base-content/90 leading-relaxed max-w-3xl mx-auto">
                             {t('educationsIntro')}
@@ -59,7 +59,7 @@ const Educations = () => {
                     </div>
 
                     {/* Footer Note */}
-                    <div className="mt-8 text-center">
+                    <div className="mt-8 text-left">
                         <p className="text-base-content/60 text-sm">
                             {t('certificationsNote')}
                         </p>

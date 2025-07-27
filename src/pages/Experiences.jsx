@@ -18,7 +18,7 @@ const Experiences = () => {
 
                 <div className="p-8">
                     {/* Introduction */}
-                    <div className="mb-8 text-center">
+                    <div className="mb-8 text-left">
                         <FaBriefcase className="mx-auto text-base-content text-4xl mb-4" />
                         <p className="text-lg text-base-content/90 leading-relaxed max-w-3xl mx-auto">
                             {t('experiencesIntro')}

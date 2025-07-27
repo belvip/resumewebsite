@@ -16,7 +16,7 @@ const About = () => {
 
                 <div className="p-8">
                     {/* Introduction avec icône */}
-                    <div className="mb-8 text-center">
+                    <div className="mb-8 text-left">
                         <FaCode className="mx-auto text-base-content text-4xl mb-4" />
                         <p className="text-lg text-base-content/90 leading-relaxed max-w-4xl mx-auto">
                             {t('aboutIntro')}
@@ -49,7 +49,7 @@ const About = () => {
                     </div>
 
                     {/* Objectif */}
-                    <div className="bg-base-200 p-6 rounded-lg text-center border-l-4 border-base-content/20">
+                    <div className="bg-base-200 p-6 rounded-lg text-left border-l-4 border-base-content/20">
                         <FaBullseye className="mx-auto text-base-content text-3xl mb-4" />
                         <h3 className="text-xl font-semibold mb-3 text-base-content">{t('myObjective')}</h3>
                         <p className="text-lg text-base-content/90 max-w-3xl mx-auto">

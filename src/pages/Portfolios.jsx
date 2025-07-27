@@ -17,7 +17,7 @@ const Portfolios = () => {
 
                 <div className="p-8">
                     {/* Introduction */}
-                    <div className="mb-8 text-center">
+                    <div className="mb-8 text-left">
                         <FaFolderOpen className="mx-auto text-base-content text-4xl mb-4" />
                         <p className="text-lg text-base-content/90 leading-relaxed max-w-3xl mx-auto">
                             {t('portfoliosIntro')}
@@ -25,7 +25,7 @@ const Portfolios = () => {
                     </div>
 
                     {/* Portfolio Link Card */}
-                    <div className="bg-base-200 p-8 rounded-lg text-center hover:shadow-lg transition-shadow">
+                    <div className="bg-base-200 p-8 rounded-lg text-left hover:shadow-lg transition-shadow">
                         <div className="mb-6">
                             <FaLaptopCode className="mx-auto text-base-content text-5xl mb-4" />
                             <h2 className="text-2xl font-semibold text-base-content mb-3">
