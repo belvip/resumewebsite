@@ -19,7 +19,7 @@ const getThemeFromLocalStorage = () => {
 };
 
 const getLanguageFromLocalStorage = () => {
-  return localStorage.getItem('language') || 'fr';  // Langue par défaut : français
+  return localStorage.getItem('language') || 'en';  // Langue par défaut : anglais
 };
 
 
