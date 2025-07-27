@@ -7,7 +7,7 @@ const HomeLayout = () => {
         <div className="min-h-screen flex flex-col">
             <Navbar />
 
-            <main className='align-element py-20 flex-grow'>
+            <main className='py-20 flex-grow'>
                 {/* Outlet for rendering child components */}
                 <Outlet />
             </main>

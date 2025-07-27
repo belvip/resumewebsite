@@ -15,10 +15,12 @@ html, body {
 /* 
     Custom class
 */
-@layer components {
-    .align-element {
-        @apply mx-auto max-w-6xl px-8;
-    }
+.align-element {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 72rem; /* 1152px */
+    padding-left: 2rem; /* 32px */
+    padding-right: 2rem; /* 32px */
 }
 
 img.h-6 {
@@ -26,13 +28,5 @@ img.h-6 {
     color: #f0f6f2;
 }
 
-/* 
-    .align-element {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 72rem; /* 1152px *
-    padding-left: 2rem; /* 32px *
-    padding-right: 2rem; /* 32px *
-    }
-*/
+
     
