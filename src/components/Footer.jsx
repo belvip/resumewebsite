@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaTiktok, FaPhone } from 'react-icons/fa';
 import logo from '../assets/logo.jpg';
+import PrivacyModal from './PrivacyModal';
 
 const Footer = () => {
     const { t } = useTranslation();
@@ -76,7 +77,12 @@ const Footer = () => {
                             <Link to="/experiences" className="text-base-content/70 hover:text-base-content hover:translate-x-1 text-sm transition-all duration-200">{t('experiences')}</Link>
                             <Link to="/portfolios" className="text-base-content/70 hover:text-base-content hover:translate-x-1 text-sm transition-all duration-200">{t('portfolios')}</Link>
                             <div className="border-t border-base-300 pt-2 mt-3">
-                                <a href="#" className="text-base-content/60 hover:text-base-content text-xs transition-colors">{t('privacyPolicy')}</a>
+                                <button 
+                                    onClick={() => document.getElementById('privacy_modal').showModal()}
+                                    className="text-base-content/60 hover:text-base-content text-xs transition-colors"
+                                >
+                                    {t('privacyPolicy')}
+                                </button>
                             </div>
                         </nav>
                     </div>
@@ -96,6 +102,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            <PrivacyModal />
         </footer>
     );
 };
