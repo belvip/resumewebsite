@@ -21,7 +21,7 @@ export const certifications = [
         title: 'Full Stack JavaScript Developer',
         provider: 'IBM',
         year: '2025',
-        certificateUrl: 'https://coursera.org/verify/your-certificate-id-1',
+        certificateUrl: 'https://www.coursera.org/account/accomplishments/specialization/certificate/CJM88PL3B013',
         icon: SiIbm,
         iconColor: 'text-slate-800'
     },
